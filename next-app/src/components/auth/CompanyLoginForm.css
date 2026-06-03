@@ -1,0 +1,131 @@
+/****** SIGN IN BUTTON ON WELCOME PG ********/
+button.l-login-link {
+    outline: none;
+    border: none;
+    color: white;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: .8em;
+    text-align: center;
+    width: 120px;
+    height: 35px;
+    background-color: #ff9700;
+}
+
+button.l-login-link:hover {
+    box-shadow: 0px 0px 10px #35353540 inset;
+    box-shadow: 0px 0px 10px #ffffff40;
+}
+
+
+/* .container {
+
+    display: block;
+    padding-top: 10em;
+} */
+
+/****** LOGIN FORM MODAL CONTENT ********/
+.c-login-contain {
+    display: flex;
+}
+
+.c-login-form-container form{
+    align-items: center;
+    display: block;
+    margin: 1em .5em 3em 5em;
+
+}
+
+.c-ocp-logo {
+    text-align-last: center;
+}
+.c-ocp-logo img {
+    width: 240px;
+    margin-left: 5em;
+    margin-top: 5em;
+    margin-bottom: 0;
+    padding-bottom:0;
+}
+
+.c-login-form input {
+    border: none;
+    border-bottom: 2px solid #35353520;
+    border-radius: 0;
+    outline: none;
+    height: 38px;
+    width: 270px;
+    background-color: #efe8e180;
+    color: #35353520;
+    margin-top:.5em;
+}
+
+.c-login-form input:hover {
+    background-color: #efe8e120;
+
+}
+
+.c-login-form input[placeholder] {
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    padding-left: 40px;
+    padding-bottom: 4px;
+    color: #353535;
+}
+
+.c-login-button {
+    display: inline;
+    width: 140px;
+    height: 38px;
+    text-align-last: center;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    font-style: normal;
+    background-color: #ff9700;
+    border: none;
+    outline: none;
+    color: white;
+    /* padding-right: 2em; */
+    margin-top: 1em;
+}
+
+.c-login-button:hover {
+    box-shadow: 0px 0px 10px #35353540 inset;
+    transform: translateY(2px);
+
+}
+
+/* .c-demo-div {
+    text-align-last: right;
+    margin-top: .5em;
+} */
+
+.c-button-contain {
+    display: inline;
+}
+
+.cycle-container {
+    background-color: white;
+    width: 10em;
+    padding: 4em;
+    margin-right: 3em;
+
+}
+.cycle-container  img {
+    /* border: 1px solid black; */
+    animation: rotation 20s infinite linear;
+    width: 16em;
+    margin-right:3em;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+  }

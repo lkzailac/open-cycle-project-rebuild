@@ -1,0 +1,212 @@
+.pp-contain {
+    /* display:block;
+    position: relative; */
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 350px;
+
+}
+
+.product-page-container {
+    /* position: fixed; */
+    display: block;
+    margin-top: 15em;
+    align-self: center;
+    /* margin-left: 20em; */
+
+
+    /* margin-top: 15em;
+    margin-left: 14em; */
+
+}
+
+.blurb-p{
+    margin-right: 5em;
+    text-align-last: left;
+    color: #353535;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1em;
+}
+
+.pe-arrow {
+    height: 2.5em;
+    /* width: 10em; */
+}
+
+.arrow-img {
+    animation-duration: 2s;
+    animation-iteration-count: 10;
+    transform-origin: top;
+    margin-left: 0;
+
+    /* margin-left: 180px; */
+    /* width: 7em; */
+}
+
+.bounce3 {
+    animation-name: bounce3;
+    animation-timing-function: ease;
+}
+@keyframes bounce3 {
+    0%   { transform: scale(1,1)   translateY(0); }
+    10%  { transform: scale(1,1)   translateY(0); }
+    30%  { transform: scale(1,1)   translateY(20px); }
+    50%  { transform: scale(1,1)   translateY(0); }
+    57%  { transform: scale(1,1)   translateY(7px); }
+    64%  { transform: scale(1,1)   translateY(0); }
+    100% { transform: scale(1,1)   translateY(0); }
+}
+
+.footprint-container h2 {
+    margin-bottom: .1em;
+}
+
+.footprint-container p{
+    color: #353535;
+    font-family: semplicitapro, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    margin-top: 0;
+    /* margin-left: 7em; */
+    color: rgb(97, 4, 4);
+}
+
+.edit-prod-table-container {
+    margin-top: 4em;
+}
+
+table.edit-product-table, th, td {
+    border-bottom: 1px solid #35353520;
+
+}
+
+table.edit-product-table {
+    width: 800px;
+    border-collapse: collapse;
+    box-shadow: 0px 5px 10px #35353510;
+    background-color: white;
+
+}
+
+table.edit-product-table > tbody > tr > th {
+    width: 220px;
+    color: #353535;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 5px;
+}
+
+table.edit-product-table > tbody > tr > td {
+    text-align: center;
+    color: #353535;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding: 5px 5px 5px 20px;
+}
+
+.product-image img {
+    width: 70px;
+}
+
+button.edit-button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    margin-right: 2em;
+}
+
+
+
+/******* FORM STYLING  */
+.mini-form {
+    width: 100%;
+    text-align-last: left;
+
+}
+.mini-form input {
+    border: none;
+    border-bottom: 1px solid #35353520;
+    width: 300px;
+    background-color: #efe8e180;
+
+}
+
+.mini-form input:hover {
+    background-color: #efe8e120;
+}
+
+.mini-form select {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #35353520;
+    width: 300px;
+    background-color: #efe8e180;
+
+}
+
+.mini-form option {
+    text-align: center;
+    color: #353535;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mini-form li {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: block;
+
+    width: 3em;
+}
+
+.label-container {
+    font-size: .7em;
+
+}
+
+#radios-form {
+    display: flex;
+    width: 200px;
+}
+#radios {
+    /* margin: 0 2em 0 0; */
+}
+
+.components-list input {
+    width: 20px;
+}
+
+.uses-list input {
+    width: 20px;
+}
+
+.save-button-contain {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+button.save-button {
+    outline: none;
+    border:none;
+    background-color: transparent;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+
+}
+
+button.save-button:hover {
+    font-weight: bold;
+}
