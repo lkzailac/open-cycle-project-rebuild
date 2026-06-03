@@ -1,0 +1,16 @@
+.user-demo-button {
+    background: none;
+    outline: none;
+    border: none;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: .9em;
+    text-align-last: right;
+    color: #353535;
+}
+
+.user-demo-button:hover {
+    font-weight: bold;
+    color: #35353580;
+}

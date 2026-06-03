@@ -1,0 +1,136 @@
+.pf-outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 400px;
+}
+
+.product-form-container {
+    margin-top: 10em;
+}
+
+.pf-blurb-p{
+    margin-right: 5em;
+    text-align-last: left;
+    color: #353535;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1.1em;
+}
+
+.pf-arrow img{
+    width: 4em;
+}
+
+.pf-arrow {
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: top;
+}
+
+.bounce3 {
+    animation-name: bounce3;
+    animation-timing-function: ease;
+}
+@keyframes bounce3 {
+    0%   { transform: scale(1,1)   translateY(0); }
+    10%  { transform: scale(1,1)   translateY(0); }
+    30%  { transform: scale(1,1)   translateY(20px); }
+    50%  { transform: scale(1,1)   translateY(0); }
+    57%  { transform: scale(1,1)   translateY(7px); }
+    64%  { transform: scale(1,1)   translateY(0); }
+    100% { transform: scale(1,1)   translateY(0); }
+}
+
+.pf-form {
+    width: 1000px;
+    margin-top: 4em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.field-contain {
+    margin-right: 2em;
+}
+
+.pf-form input {
+    width: 270px;
+    height: 30px;
+}
+
+.pf-form select {
+    width: 270px;
+    height: 38px;
+    border: 2px solid #35353520;
+    border-radius: 3px;
+    color: #353535;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+}
+.ck-label-container {
+    width: 57px;
+    font-size: .7em;
+}
+.pf-form li {
+    margin-left: 0;
+    margin-right: 20px;
+
+}
+
+.pf-label-container {
+    margin-top: 1em;
+}
+
+input.pf-radio {
+   width: 60px;
+}
+
+label.pf-radio-label {
+    margin: 0;
+}
+
+div.pf-return-elements {
+    color: #ff9700;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.full-width {
+    display: block;
+    margin-left: 17em;
+}
+
+button.create-button {
+
+    border: none;
+    outline: none;
+    background-color: #ff9700;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    width: 30em;
+    height: 3em;
+    border-right: 2px solid #35353520;
+    border-bottom: 2px solid #35353520;
+
+}
+
+button.create-button:hover {
+    box-shadow: 5px 5px 10px #35353540 inset;
+    transform: translateY(2px);
+    border-bottom: none;
+    border-right: none;
+}
+
+.inline-error {
+    display: inline;
+}
+
+ul.components-list {
+    align-items: flex-end;
+}

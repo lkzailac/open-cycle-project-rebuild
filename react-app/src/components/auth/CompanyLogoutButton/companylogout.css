@@ -1,0 +1,28 @@
+.company-logout-container {
+    position: relative;
+}
+
+.company-logout-button {
+    position: absolute;
+    display: inline;
+    /* float: right; */
+
+    border: none;
+    outline: none;
+    background-color: #ff9700;
+    font-family: semplicitapro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: white;
+    width: 10em;
+    height: 2.5em;
+    /* margin-bottom: 2em; */
+    margin-right: 8em;
+    top: -3.4em;
+    right: 3em;
+}
+
+.company-logout-button:hover {
+    box-shadow: 0px 0px 10px #35353540 inset;
+    transform: translateY(2px);
+}
