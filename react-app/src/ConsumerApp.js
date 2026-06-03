@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 // import LoginForm from "./components/auth/LoginForm/index";
 import SignUpForm from "./components/auth/SignUpForm/index";
@@ -27,22 +27,20 @@ function ConsumerApp() {
 
 
   return (
-    <BrowserRouter>
-      <Switch>
-        {/* <Route path="/consumer/login" exact={true}>
-          <LoginForm />
-        </Route> */}
-        <Route path="/consumer/signup" exact={true}>
-          <SignUpForm />
-        </Route>
-        <ProtectedRoute path="/consumer/" exact={true} >
-          <ConsumerPage />
-        </ProtectedRoute>
-        <ProtectedRoute path="/consumer/:userId" exact={true} >
-          <ConsumerPage />
-        </ProtectedRoute>
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      {/* <Route path="/consumer/login" exact={true}>
+        <LoginForm />
+      </Route> */}
+      <Route path="/consumer/signup" exact={true}>
+        <SignUpForm />
+      </Route>
+      <ProtectedRoute path="/consumer/" exact={true}>
+        <ConsumerPage />
+      </ProtectedRoute>
+      <ProtectedRoute path="/consumer/:userId" exact={true}>
+        <ConsumerPage />
+      </ProtectedRoute>
+    </Switch>
   );
 }
 
