@@ -7,6 +7,6 @@ export default function AuthInitializer() {
   const checkSessions = useAuthStore((s) => s.checkSessions);
   useEffect(() => {
     checkSessions();
-  }, []);
+  }, [checkSessions]);
   return null;
 }

@@ -53,7 +53,7 @@ export default function Welcome() {
         </div>
       </div>
       <div className="dont-hide">
-        <h3 className="dont-hide-h3">Don't hide your pollution. Own it.</h3>
+        <h3 className="dont-hide-h3">Don&apos;t hide your pollution. Own it.</h3>
       </div>
     </div>
   );
