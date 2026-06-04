@@ -18,6 +18,7 @@ async def get_all_products(user_id: int, db: AsyncSession = Depends(get_db)):
         .join(CompanyProfile, Product.company_id == CompanyProfile.id)
         .options(
             selectinload(Product.consumer_uses),
+            selectinload(Product.components),
         )
     )
     rows = (await db.execute(stmt)).all()
