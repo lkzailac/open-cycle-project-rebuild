@@ -5,14 +5,14 @@ import { useAuthStore } from "@/store/authStore";
 import { useProduct } from "@/hooks/useProduct";
 import { useCompanyData } from "@/hooks/useCompanyData";
 import { useUpdateProduct } from "@/hooks/useProductMutations";
-import type { Product } from "@/types";
+import type { Product, ProductUpdatePayload } from "@/types";
 import "./ProductPage.css";
 
 interface ProductPageProps {
   productId: number;
 }
 
-type EditField = keyof Product | null;
+type EditField = keyof Product | "compArray" | "useArray" | null;
 
 export default function ProductPage({ productId }: ProductPageProps) {
   const company = useAuthStore((s) => s.company)!;
@@ -42,7 +42,7 @@ export default function ProductPage({ productId }: ProductPageProps) {
     setUseChecked(new Array(consumer_uses.length).fill(false));
   };
 
-  const save = async (patch: Partial<Product>) => {
+  const save = async (patch: Omit<ProductUpdatePayload, "id">) => {
     await updateProduct.mutateAsync({ id: productId, ...patch });
     setEditField(null);
   };
@@ -103,7 +103,7 @@ export default function ProductPage({ productId }: ProductPageProps) {
       ),
     },
     {
-      label: "Components", field: "components",
+      label: "Components", field: "compArray",
       display: currentProd.components?.map((c) => <p key={c.id}>{c.name}</p>),
       editor: miniForm(
         <ul className="components-list">
@@ -115,7 +115,7 @@ export default function ProductPage({ productId }: ProductPageProps) {
             </li>
           ))}
         </ul>,
-        () => save({ components: getCheckedIds(componentChecked, components).map((id) => ({ id, name: "" })) } as Partial<Product>)
+        () => save({ compArray: getCheckedIds(componentChecked, components) })
       ),
     },
     {
@@ -176,7 +176,7 @@ export default function ProductPage({ productId }: ProductPageProps) {
       ),
     },
     {
-      label: "Consumer Uses", field: "uses",
+      label: "Consumer Uses", field: "useArray",
       display: currentProd.uses?.length ? currentProd.uses.map((u) => <p key={u.id}>{u.name}</p>) : <p>None</p>,
       editor: miniForm(
         <ul className="uses-list">
@@ -188,7 +188,7 @@ export default function ProductPage({ productId }: ProductPageProps) {
             </li>
           ))}
         </ul>,
-        () => save({ uses: getCheckedIds(useChecked, consumer_uses).map((id) => ({ id, name: "" })) } as Partial<Product>)
+        () => save({ useArray: getCheckedIds(useChecked, consumer_uses) })
       ),
     },
     {

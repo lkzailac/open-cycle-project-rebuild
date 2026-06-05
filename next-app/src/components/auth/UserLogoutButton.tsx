@@ -8,9 +8,9 @@ export default function UserLogoutButton() {
   const router = useRouter();
   const logoutUser = useAuthStore((s) => s.logoutUser);
 
-  const handleLogout = async () => {
+  const handleLogout = () => {
+    logoutUser();
     router.push("/");
-    await logoutUser();
   };
 
   return (

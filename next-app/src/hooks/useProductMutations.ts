@@ -1,17 +1,17 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import type { NewProductPayload, Product } from "@/types";
+import { authFetch } from "@/lib/apiClient";
+import type { NewProductPayload, Product, ProductUpdatePayload } from "@/types";
 
 export function useCreateProduct(companyId: number) {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: async (payload: NewProductPayload) => {
-      const res = await fetch("/api/company/products", {
+      const res = await authFetch("/api/company/products", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
       const data = await res.json();
-      if (data.errors) throw data;
+      if (!res.ok) throw data;
       return data as Product;
     },
     onSuccess: () => {
@@ -23,11 +23,12 @@ export function useCreateProduct(companyId: number) {
 export function useUpdateProduct(productId: number, companyId: number) {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: async (product: Partial<Product> & { id: number }) => {
-      const res = await fetch(`/api/company/products/${product.id}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ product }),
+    mutationFn: async ({ id, ...patch }: ProductUpdatePayload) => {
+      // FastAPI expects a flat ProductUpdate object (not { product: {...} })
+      // Method is PUT, not POST
+      const res = await authFetch(`/api/company/products/${id}`, {
+        method: "PUT",
+        body: JSON.stringify(patch),
       });
       if (!res.ok) throw new Error("Update failed");
       return res.json() as Promise<Product>;
@@ -43,7 +44,7 @@ export function useDeleteProduct(companyId: number) {
   const queryClient = useQueryClient();
   return useMutation({
     mutationFn: async (productId: number) => {
-      const res = await fetch(`/api/company/products/${productId}`, {
+      const res = await authFetch(`/api/company/products/${productId}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Delete failed");

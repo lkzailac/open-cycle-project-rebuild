@@ -1,8 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
+import { authFetch } from "@/lib/apiClient";
 import type { AllProductsData } from "@/types";
 
 async function fetchAllProducts(userId: number): Promise<AllProductsData> {
-  const res = await fetch(`/api/consumer/${userId}`);
+  const res = await authFetch(`/api/consumer/${userId}`);
   if (!res.ok) throw new Error("Failed to fetch products");
   return res.json();
 }

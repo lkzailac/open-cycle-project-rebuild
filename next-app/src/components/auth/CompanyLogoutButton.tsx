@@ -8,9 +8,9 @@ export default function CompanyLogoutButton() {
   const router = useRouter();
   const logoutCompany = useAuthStore((s) => s.logoutCompany);
 
-  const handleLogout = async () => {
+  const handleLogout = () => {
+    logoutCompany();
     router.push("/");
-    await logoutCompany();
   };
 
   return (

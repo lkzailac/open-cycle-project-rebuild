@@ -2,12 +2,15 @@ export interface User {
   id: number;
   username: string;
   email: string;
+  role: "user";
 }
 
 export interface Company {
-  id: number;
+  id: number;        // company_profile.id
+  account_id: number;
+  email: string;     // was admin_email
+  role: "company";
   name: string;
-  admin_email: string;
   logo_url: string;
   statement: string;
   warehouse_location: string;
@@ -95,6 +98,26 @@ export interface NewProductPayload {
   returnable: boolean;
   product_returned_percent: number;
   product_recycled_percent: number;
+}
+
+// Flat update payload matching FastAPI's ProductUpdate schema
+export interface ProductUpdatePayload {
+  id: number;
+  name?: string;
+  photo_url?: string;
+  product_category?: string;
+  compArray?: number[];
+  manufacturing_process_id?: number;
+  product_weight_g?: number;
+  package_weight_g?: number;
+  factory_id?: number;
+  unit?: string;
+  transport_mode_id?: number;
+  useArray?: number[];
+  number_of_cycles?: number;
+  returnable?: boolean;
+  product_returned_percent?: number;
+  product_recycled_percent?: number;
 }
 
 export interface CompanySignUpData {
