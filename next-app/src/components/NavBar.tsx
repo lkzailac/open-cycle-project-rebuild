@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
-        <img src="/images/logo.svg" alt="Open Cycle Project" />
+        <span>Open Cycle Project</span>
       </div>
       <ul className={styles.links}>
         <li><a href="#">Browse Brands</a></li>
