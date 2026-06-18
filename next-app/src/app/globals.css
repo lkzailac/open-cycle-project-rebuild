@@ -1,21 +1,52 @@
+:root {
+  --green: #424530;
+  --orange: #e09132;
+  --cream: #f2f0e9;
+  --grey: #e1e0d5;
+  --text: #2d2b26;
+  --text-light: #7a7870;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
-  background-color: #fcfcfc;
-}
-
-.wrapper {
-  min-height: 100%;
-  margin-bottom: -250px;
-}
-
-h1,
-h2,
-h3 {
   font-family: semplicitapro, sans-serif;
   font-weight: 300;
-  font-style: normal;
+  background-color: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
 }
 
-.errors {
-  color: red;
-  font-size: 0.85rem;
+h1, h2, h3, h4, h5, h6 {
+  font-family: semplicitapro, sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: semplicitapro, sans-serif;
+  font-weight: 300;
+}
+
+input {
+  font-family: semplicitapro, sans-serif;
 }

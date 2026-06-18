@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210.65 181.66">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #f2f0e9;
+      }
+
+      .cls-2 {
+        font-size: 158.13px;
+      }
+
+      .cls-2, .cls-5 {
+        font-family: TheSeasons-Light, 'The Seasons';
+      }
+
+      .cls-2, .cls-5, .cls-6, .cls-7 {
+        font-weight: 300;
+      }
+
+      .cls-5 {
+        font-size: 72.48px;
+      }
+
+      .cls-6 {
+        font-size: 30.85px;
+      }
+
+      .cls-6, .cls-7 {
+        font-family: SemplicitaPro-Light, 'Semplicita Pro';
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-8, .cls-9, .cls-10 {
+        fill: #e0912f;
+      }
+
+      .cls-9 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-4 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-7 {
+        font-size: 41px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <text class="cls-5" transform="translate(82.95 134.41)"><tspan class="cls-3" x="0" y="0">y</tspan><tspan class="cls-8" x="34.64" y="0">c</tspan><tspan class="cls-1" x="71.68" y="0">le</tspan></text>
+    <text class="cls-7" transform="translate(106.51 64.98)"><tspan class="cls-10" x="0" y="0">O</tspan><tspan class="cls-1" x="36.57" y="0">pen</tspan></text>
+    <text class="cls-6" transform="translate(117.28 172.62)"><tspan class="cls-9" x="0" y="0">P</tspan><tspan class="cls-4" x="16.29" y="0">r</tspan><tspan class="cls-1" x="25.21" y="0">oject</tspan></text>
+    <text class="cls-2" transform="translate(0 134.41)"><tspan x="0" y="0">c</tspan></text>
+  </g>
+</svg>
